@@ -1,0 +1,12 @@
+definition_version: "2"
+entities:
+  film_analytics_app:
+    type: streamlit
+    identifier:
+      name: FILM_ANALYTICS_APP
+    title: "Film Analytics"
+    query_warehouse: FILM_ANALYTICS_WH
+    main_file: streamlit/streamlit_app.py
+    artifacts:
+      - streamlit/streamlit_app.py
+      - streamlit/environment.yml
