@@ -1,0 +1,8 @@
+name: film-analytics
+channels:
+  - snowflake
+dependencies:
+  - streamlit
+  - pandas
+  - plotly
+  - snowflake-snowpark-python
