@@ -1,0 +1,18 @@
+-- Run once, as ACCOUNTADMIN or SYSADMIN.
+-- Creates the database, schemas, and a small auto-suspending warehouse
+-- so trial credits aren't burned by an idle warehouse.
+
+CREATE DATABASE IF NOT EXISTS FILM_ANALYTICS;
+
+CREATE SCHEMA IF NOT EXISTS FILM_ANALYTICS.RAW;
+CREATE SCHEMA IF NOT EXISTS FILM_ANALYTICS.ANALYTICS;
+
+CREATE WAREHOUSE IF NOT EXISTS FILM_ANALYTICS_WH
+  WAREHOUSE_SIZE = 'XSMALL'
+  AUTO_SUSPEND = 60
+  AUTO_RESUME = TRUE
+  INITIALLY_SUSPENDED = TRUE
+  COMMENT = 'Small warehouse for film analytics project - auto-suspends after 60s idle';
+
+USE DATABASE FILM_ANALYTICS;
+USE WAREHOUSE FILM_ANALYTICS_WH;
