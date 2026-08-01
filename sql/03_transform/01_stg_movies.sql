@@ -33,8 +33,7 @@ SELECT
 FROM FILM_ANALYTICS.RAW.MOVIES_METADATA_RAW
 WHERE TRY_CAST(id AS NUMBER) IS NOT NULL;   -- drop the handful of corrupted rows with a non-numeric id
 
--- How many rows failed to parse genres/studios (apostrophe-in-name issue)?
--- Useful to check once, not part of the pipeline logic itself.
+-- DQ check
 SELECT
     COUNT_IF(genres IS NOT NULL AND genres != '[]' AND genres_variant IS NULL)  AS genre_parse_failures,
     COUNT_IF(studios IS NOT NULL AND studios != '[]' AND studios_variant IS NULL) AS studio_parse_failures
