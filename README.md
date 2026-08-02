@@ -23,3 +23,13 @@ Streamlit-in-Snowflake app
   - Visuals: revenue trends, genre performance, budget vs ROI, top studios
 ```
 
+## Demo Screenshots of Analytics
+![Revenue and profit by year line chart](img/line-chart.png)
+
+![Genre performance](img/genre-perf.png)
+
+![Box office trends](img/box-office-trends.png)
+
+![Scatter plot of genre performance](img/scatter-plot-1.png)
+
+![Scatter plot tooltip](img/scatter-plot-2.png)
