@@ -5,6 +5,11 @@ from snowflake.snowpark.context import get_active_session
 
 st.set_page_config(page_title="Film Analytics", layout="wide")
 session = get_active_session()
+
+# database/schema set-up
+DB = "FILM_ANALYTICS"
+SCHEMA = "ANALYTICS"
+
 @st.cache_data(ttl=600)
 def load_genres():
     return session.sql(f"SELECT genre_id, genre_name FROM {DB}.{SCHEMA}.DIM_GENRE ORDER BY genre_name").to_pandas()
