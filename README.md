@@ -26,7 +26,7 @@ Streamlit-in-Snowflake app
 ## Demo Screenshots of Analytics
 ![Revenue and profit by year line chart](img/line-chart.png)
 
-![Genre performance](img/genre-perf.png)
+<img src="img/genre-perf.png" alt="Genre performance" width="75%">
 
 ![Box office trends](img/box-office-trends.png)
 
